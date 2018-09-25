@@ -44,6 +44,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -89,19 +95,132 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\set1.css" />
+    <Content Include="css\set2.css" />
+    <Content Include="css\simple-line-icons.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\swiper.min.css" />
+    <Content Include="css\themify-icons.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\Simple-Line-Icons.svg" />
+    <Content Include="fonts\slick.svg" />
+    <Content Include="fonts\themify.svg" />
+    <Content Include="images\customer-img1.jpg" />
+    <Content Include="images\customer-img2.jpg" />
+    <Content Include="images\featured1.jpg" />
+    <Content Include="images\featured2.jpg" />
+    <Content Include="images\featured3.jpg" />
+    <Content Include="images\featured4.jpg" />
+    <Content Include="images\find-place1.jpg" />
+    <Content Include="images\find-place2.jpg" />
+    <Content Include="images\find-place3.jpg" />
+    <Content Include="images\find-place4.jpg" />
+    <Content Include="images\find-place5.jpg" />
+    <Content Include="images\follow-img.jpg" />
+    <Content Include="images\map.jpg" />
+    <Content Include="images\reserve-slide1.jpg" />
+    <Content Include="images\reserve-slide2.jpg" />
+    <Content Include="images\reserve-slide3.jpg" />
+    <Content Include="images\review-img1.jpg" />
+    <Content Include="images\review-img2.jpg" />
+    <Content Include="images\review-img3.jpg" />
+    <Content Include="images\slider.jpg" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-3.2.1.min.js" />
+    <Content Include="js\jquery.magnific-popup.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="js\swiper.min.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="css\style.css.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\Simple-Line-Icons.eot" />
+    <Content Include="fonts\Simple-Line-Icons.ttf" />
+    <Content Include="fonts\Simple-Line-Icons.woff" />
+    <Content Include="fonts\Simple-Line-Icons.woff2" />
+    <Content Include="fonts\slick.eot" />
+    <Content Include="fonts\slick.ttf" />
+    <Content Include="fonts\slick.woff" />
+    <Content Include="fonts\themify.eot" />
+    <Content Include="fonts\themify.ttf" />
+    <Content Include="fonts\themify.woff" />
+    <Content Include="scss\style.scss" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layoutnotused.cshtml" />
+    <Content Include="Areas\Admin\Views\Auth\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\AddListing.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\EditListing.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\ListingDetails.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\AddDriver.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\DriversList.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\EditDriver.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\DriverDetails.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\AdvertiseList.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\NewAdvertise.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\EditAdvertise.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\AdvertiseDetails.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AuthController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PanelController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\RoleProvider.cs" />
+    <Compile Include="Migrations\201809190130385_InitialModels.cs" />
+    <Compile Include="Migrations\201809190130385_InitialModels.Designer.cs">
+      <DependentUpon>201809190130385_InitialModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Models.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\AddListing.cshtml" />
+    <Content Include="Views\Home\AddDriver.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Panel\ListingsList.cshtml" />
+    <Content Include="Views\Home\NewAdvertise.cshtml" />
+    <Content Include="Views\Home\Feedback.cshtml" />
+    <Content Include="Views\Home\Thanks.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\MyProfile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,8 +230,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809190130385_InitialModels.resx">
+      <DependentUpon>201809190130385_InitialModels.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,88 @@
+﻿@model IEnumerable<RadioCabs.Models.Advertisement>
+
+@{
+    ViewBag.Title = "Advertisements List";
+}
+<section class="main-block">
+    <div class="container">
+
+        <h2>Advertisements List</h2>
+
+        <p>
+            @Html.ActionLink("Create New", "NewAdvertise")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Designation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MobileNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TelephoneNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FaxNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmailAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaymentType)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Designation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MobileNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelephoneNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FaxNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentType)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditAdvertise", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "AdvertiseDetails", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "DeleteAdvertise", new { id = item.ID })
+                </td>
+            </tr>
+    }
+
+        </table>
+
+    </div>
+</section>
+

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Admin Panel";
+}
+<section class="main-block">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="styled-heading">
+                    <h3>Admin Panel</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <a href="@Url.Action("ListingsList", "Panel")">ListingsList</a>
+        </div>
+        <div class="row">
+            <a href="@Url.Action("DriversList", "Panel")">DriversList</a>
+        </div>
+        <div class="row">
+            <a href="@Url.Action("AdvertisementsList", "Panel")">AdvertisementsList</a>
+        </div>
+
+    </div>
+</section>
+
+

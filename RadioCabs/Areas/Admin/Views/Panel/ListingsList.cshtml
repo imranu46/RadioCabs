@@ -1,0 +1,105 @@
+﻿@model IEnumerable<RadioCabs.Models.Listing>
+
+@{
+    ViewBag.Title = "ListingsView";
+}
+
+<section class="main-block">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="styled-heading">
+                    <h2>ListingsView</h2>
+                </div>
+            </div>
+        </div>
+        
+
+        <p>
+            @Html.ActionLink("Create New", "AddListing")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompanyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactPerson)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Designation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MobileNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TelephoneNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FaxNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmailAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MembershipType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PaymentType)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompanyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Password)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ContactPerson)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Designation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MobileNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TelephoneNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FaxNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmailAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MembershipType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PaymentType)
+                    </td>
+                    <td>
+                        <a href="@Url.Action("EditListing", "Panel", new { id = item.ID })">Edit</a> |
+                        <a href="@Url.Action("ListingDetails", "Panel", new { id = item.ID })">Details</a> |
+                        <a href="@Url.Action("DeleteListing", "Panel", new { id = item.ID })">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</section>

@@ -1,0 +1,112 @@
+﻿@model RadioCabs.Models.Listing
+
+@{
+    ViewBag.Title = "ListingDetails";
+}
+<section class="main-block">
+    <div class="container">
+
+        <h2>ListingDetails</h2>
+
+        <div>
+            <h4>Listing</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.CompanyName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CompanyName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Password)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Password)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ContactPerson)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ContactPerson)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Designation)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Designation)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MobileNo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MobileNo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TelephoneNo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TelephoneNo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.FaxNo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FaxNo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EmailAddress)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EmailAddress)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MembershipType)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MembershipType)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PaymentType)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PaymentType)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "EditListing", new { id = Model.ID }) |
+            @Html.ActionLink("Back to List", "ListingsList")
+        </p>
+
+    </div>
+</section>
+
